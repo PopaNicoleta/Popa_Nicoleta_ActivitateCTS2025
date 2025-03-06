@@ -7,52 +7,12 @@ public abstract class Aplicant{
 	protected int punctaj;
 	protected int nr_proiecte;
 	protected String[] denumireProiect;
+	private static final int PRAG_ACCEPTARE = 80;
 
-
-	public String getNume() {
-		return nume;
-	}
-	public void setNume(String nume) {
-		this.nume = nume;
-	}
-	public String getPrenume() {
-		return prenume;
-	}
-	public void setPrenume(String prenume) {
-		this.prenume = prenume;
-	}
-
-	public int getVarsta() {
-
-		return varsta;
-	}
-
-	public void setVarsta(int varsta) {
-
-		this.varsta = varsta;
-	}
-
-	public int getPunctaj() {
-
-		return punctaj;
-	}
-
-	public void setPunctaj(int punctaj) {
-		this.punctaj = punctaj;
-	}
-
-
-	public void statut(){
-		if(punctaj>80)
-			System.out.println("Aplicantul " + nume + " " + prenume + " a fost acceptat.");
-		else
-			System.out.println("Aplicantul "+nume+" "+prenume+" nu a fost acceptat.");
-		}
-
-	
 	public Aplicant() {
 		super();
 	}
+
 	public Aplicant(String nume, String prenume, int varsta, int punctaj, int nr_proiecte, String[] denumireProiect) {
 		super();
 		this.nume = nume;
@@ -62,11 +22,53 @@ public abstract class Aplicant{
 		this.nr_proiecte = nr_proiecte;
 		this.denumireProiect = denumireProiect;
 	}
-	public int getNr_proiecte() {
 
+	public String getNume() {
+		return nume;
+	}
+
+	public void setNume(String nume) {
+		this.nume = nume;
+	}
+
+	public String getPrenume() {
+		return prenume;
+	}
+
+	public void setPrenume(String prenume) {
+		this.prenume = prenume;
+	}
+
+	public int getVarsta() {
+		return varsta;
+	}
+
+	public void setVarsta(int varsta) {
+		this.varsta = varsta;
+	}
+
+	public int getPunctaj() {
+		return punctaj;
+	}
+
+	public void setPunctaj(int punctaj) {
+		this.punctaj = punctaj;
+	}
+
+	public void afiseazaRezultatAplicant() {
+		System.out.println(getRezultatAplicant());
+	}
+
+	private String getRezultatAplicant() {
+		return "Aplicantul " + nume + " " + prenume + (punctaj > PRAG_ACCEPTARE ? " a fost acceptat." : " nu a fost acceptat.");
+	}
+
+
+	public int getNrProiecte() {
 		return nr_proiecte;
 	}
-	public void setNr_proiecte(int nr_proiecte,String[] denumireProiect) {
+
+	public void setNrProiecte(int nr_proiecte,String[] denumireProiect) {
 		this.denumireProiect = denumireProiect;
 		this.nr_proiecte = nr_proiecte;
 	}

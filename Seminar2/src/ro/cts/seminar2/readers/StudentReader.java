@@ -22,10 +22,12 @@ public class StudentReader extends AplicantReader {
 
         while (input.hasNext()) {
             Student aplicant = new Student();
+
             super.readAplicantData(input, aplicant);
             int an_studii = input.nextInt();
             String facultate = (input.next()).toString();
-            aplicant.setAn_studii(an_studii);
+
+            aplicant.setAnStudii(an_studii);
             aplicant.setFacultate(facultate);
             studenti.add(aplicant);
         }
