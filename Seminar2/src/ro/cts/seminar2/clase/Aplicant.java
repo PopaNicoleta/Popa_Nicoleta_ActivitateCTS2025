@@ -1,25 +1,26 @@
 package ro.cts.seminar2.clase;
 
+import java.util.Arrays;
+
 public abstract class Aplicant{
 	protected String nume;
 	protected String prenume;
 	protected int varsta;
 	protected int punctaj;
-	protected int nr_proiecte;
+	protected int nrProiecte;
 	protected String[] denumireProiect;
-	private static final int PRAG_ACCEPTARE = 80;
 
 	public Aplicant() {
 		super();
 	}
 
-	public Aplicant(String nume, String prenume, int varsta, int punctaj, int nr_proiecte, String[] denumireProiect) {
+	public Aplicant(String nume, String prenume, int varsta, int punctaj, int nrProiecte, String[] denumireProiect) {
 		super();
 		this.nume = nume;
 		this.prenume = prenume;
 		this.varsta = varsta;
 		this.punctaj = punctaj;
-		this.nr_proiecte = nr_proiecte;
+		this.nrProiecte = nrProiecte;
 		this.denumireProiect = denumireProiect;
 	}
 
@@ -55,22 +56,23 @@ public abstract class Aplicant{
 		this.punctaj = punctaj;
 	}
 
-	public void afiseazaRezultatAplicant() {
-		System.out.println(getRezultatAplicant());
-	}
-
-	private String getRezultatAplicant() {
-		return "Aplicantul " + nume + " " + prenume + (punctaj > PRAG_ACCEPTARE ? " a fost acceptat." : " nu a fost acceptat.");
-	}
-
 
 	public int getNrProiecte() {
-		return nr_proiecte;
+		return nrProiecte;
 	}
 
 	public void setNrProiecte(int nr_proiecte,String[] denumireProiect) {
 		this.denumireProiect = denumireProiect;
-		this.nr_proiecte = nr_proiecte;
+		this.nrProiecte = nr_proiecte;
+	}
+
+	//am adaugat toString in aceasta clasa deoarece suprascriam functia in toate clasele copil
+	//fapt care incalca principiul DRY
+	@Override
+	public String toString() {
+		return "Nume=" + nume + ", Prenume=" + prenume + ", Varsta=" + varsta +
+				", Punctaj=" + punctaj + ", NrProiecte=" + nrProiecte +
+				", DenumireProiect=" + Arrays.toString(denumireProiect);
 	}
 
 	public abstract void afiseazaFinantarePrimita();

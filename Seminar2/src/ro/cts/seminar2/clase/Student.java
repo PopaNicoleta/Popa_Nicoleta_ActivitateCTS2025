@@ -36,7 +36,7 @@ public class Student extends Aplicant {
 
 	@Override
 	public String toString() {
-		return "Student: Nume=" + nume + ", Prenume=" + prenume + ", Varsta=" + varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nr_proiecte +  ", DenumireProiect=" + Arrays.toString(denumireProiect) + "Facultate=" + facultate + ", An_studii=" + anStudii ;
+		return "Student: " + super.toString() + ", Facultate=" + facultate + ", AnStudii=" + anStudii;
 	}
 
 	@Override
