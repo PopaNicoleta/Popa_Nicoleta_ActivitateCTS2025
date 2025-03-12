@@ -2,11 +2,12 @@ package ro.cts.seminar2.clase;
 
 import java.util.Arrays;
 
+import static ro.cts.seminar2.finantari.ConstanteFinantare.SUMA_FINANTARE_ELEV;
+
 public class Elev extends Aplicant{
 
 	private int clasa;
 	private String tutore;
-	private static float sumaFinantata = 30;
 
 	public Elev() {
 		super();
@@ -14,11 +15,10 @@ public class Elev extends Aplicant{
 
 	public Elev(String nume, String prenume, int varsta, int punctaj,
 				int nrProiecte, String[] denumireProiect, int clasa, String tutore) {
-		super(nume,prenume,varsta,punctaj,nrProiecte,denumireProiect);
+		super(nume,prenume,varsta,punctaj,nrProiecte,denumireProiect, SUMA_FINANTARE_ELEV);
 		this.clasa = clasa;
 		this.tutore = tutore;
 	}
-
 
 	public int getClasa() {
 		return clasa;
@@ -37,14 +37,13 @@ public class Elev extends Aplicant{
 	}
 
 	@Override
+	public float getSumaFinantata() {
+		return 30;
+	}
+
+
+	@Override
 	public String toString() {
 		return "Elev: " + super.toString() + ", Clasa=" + clasa + ", Tutore=" + tutore;
 	}
-
-	@Override
-	public void afiseazaFinantarePrimita() {
-		System.out.println("Angajatul " + getNume() + " " + getPrenume() + " primeste" + sumaFinantata + " Euro/zi in proiect.");
-	}
-
-	
 }

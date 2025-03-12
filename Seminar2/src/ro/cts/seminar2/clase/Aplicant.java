@@ -1,5 +1,4 @@
 package ro.cts.seminar2.clase;
-
 import java.util.Arrays;
 
 public abstract class Aplicant{
@@ -9,12 +8,13 @@ public abstract class Aplicant{
 	protected int punctaj;
 	protected int nrProiecte;
 	protected String[] denumireProiect;
+	protected float sumaFinantata;
 
 	public Aplicant() {
 		super();
 	}
 
-	public Aplicant(String nume, String prenume, int varsta, int punctaj, int nrProiecte, String[] denumireProiect) {
+	public Aplicant(String nume, String prenume, int varsta, int punctaj, int nrProiecte, String[] denumireProiect, float sumaFinantata) {
 		super();
 		this.nume = nume;
 		this.prenume = prenume;
@@ -22,6 +22,7 @@ public abstract class Aplicant{
 		this.punctaj = punctaj;
 		this.nrProiecte = nrProiecte;
 		this.denumireProiect = denumireProiect;
+		this.sumaFinantata = sumaFinantata;
 	}
 
 	public String getNume() {
@@ -56,7 +57,6 @@ public abstract class Aplicant{
 		this.punctaj = punctaj;
 	}
 
-
 	public int getNrProiecte() {
 		return nrProiecte;
 	}
@@ -66,8 +66,10 @@ public abstract class Aplicant{
 		this.nrProiecte = nr_proiecte;
 	}
 
-	//am adaugat toString in aceasta clasa deoarece suprascriam functia in toate clasele copil
-	//fapt care incalca principiul DRY
+	public float getSumaFinantata() {
+		return sumaFinantata;
+	}
+
 	@Override
 	public String toString() {
 		return "Nume=" + nume + ", Prenume=" + prenume + ", Varsta=" + varsta +
@@ -75,5 +77,4 @@ public abstract class Aplicant{
 				", DenumireProiect=" + Arrays.toString(denumireProiect);
 	}
 
-	public abstract void afiseazaFinantarePrimita();
 }

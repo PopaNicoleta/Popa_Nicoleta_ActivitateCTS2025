@@ -1,18 +1,17 @@
 package ro.cts.seminar2.clase;
 
-import java.util.Arrays;
+import ro.cts.seminar2.finantari.ConstanteFinantare;
+
+import static ro.cts.seminar2.finantari.ConstanteFinantare.SUMA_FINANTARE_ANGAJAT;
 
 public class Angajat extends Aplicant{
     private String ocupatie;
     private int salariu;
-    private static float sumaFinantata = 10;
-
     public Angajat() {
         super();
     }
-
     public Angajat(String nume, String prenume, int varsta, int punctaj, int nrProiecte, String[] denumireProiecte, int salariu, String ocupatie) {
-        super(nume, prenume, varsta, punctaj, nrProiecte, denumireProiecte);
+        super(nume, prenume, varsta, punctaj, nrProiecte, denumireProiecte, SUMA_FINANTARE_ANGAJAT);
         this.salariu = salariu;
         this.ocupatie = ocupatie;
     }
@@ -37,11 +36,5 @@ public class Angajat extends Aplicant{
     public String toString() {
         return "Angajat: " + super.toString() + ", Ocupatie=" + ocupatie + ", Salariu=" + salariu;
     }
-
-    @Override
-    public void afiseazaFinantarePrimita() {
-        System.out.println("Angajatul " + getNume() + " " + getPrenume() + " primeste" + sumaFinantata + " Euro/zi in proiect.");
-    }
-
 
 }
