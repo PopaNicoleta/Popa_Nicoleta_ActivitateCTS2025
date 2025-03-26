@@ -1,4 +1,4 @@
-package clase;
+package SimpleFactory.clase;
 
 public class Brancardier extends PersonalSpital{
     private String tura;

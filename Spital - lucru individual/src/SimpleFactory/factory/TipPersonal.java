@@ -1,4 +1,4 @@
-package factory;
+package SimpleFactory.factory;
 
 public enum TipPersonal {
     Brancardier,

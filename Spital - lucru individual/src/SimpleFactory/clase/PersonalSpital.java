@@ -1,4 +1,4 @@
-package clase;
+package SimpleFactory.clase;
 
 public abstract class PersonalSpital {
     private String nume;

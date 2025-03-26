@@ -1,6 +1,12 @@
-import clase.PersonalSpital;
-import factory.FactoryPersonal;
-import factory.TipPersonal;
+package SimpleFactory.main;
+
+import SimpleFactory.clase.Asistent;
+import SimpleFactory.clase.Brancardier;
+import SimpleFactory.clase.Medic;
+import SimpleFactory.clase.PersonalSpital;
+import SimpleFactory.factory.FactoryPersonal;
+import SimpleFactory.factory.TipPersonal;
+
 
 public class Main {
     public static void main(String[] args) {

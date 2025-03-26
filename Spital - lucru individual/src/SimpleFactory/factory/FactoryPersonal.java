@@ -1,9 +1,10 @@
-package factory;
+package SimpleFactory.factory;
 
-import clase.Asistent;
-import clase.Brancardier;
-import clase.Medic;
-import clase.PersonalSpital;
+import SimpleFactory.clase.Asistent;
+
+import SimpleFactory.clase.Brancardier;
+import SimpleFactory.clase.Medic;
+import SimpleFactory.clase.PersonalSpital;
 
 public class FactoryPersonal {
     private String nume;

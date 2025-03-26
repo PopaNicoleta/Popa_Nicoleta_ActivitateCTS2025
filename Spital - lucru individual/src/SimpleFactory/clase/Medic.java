@@ -1,4 +1,4 @@
-package clase;
+package SimpleFactory.clase;
 
 public class Medic extends PersonalSpital{
     private String specializare;
