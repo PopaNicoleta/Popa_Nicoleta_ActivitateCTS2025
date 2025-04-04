@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Abonament - lucru individual/Abonament - lucru individual.iml" filepath="$PROJECT_DIR$/Abonament - lucru individual/Abonament - lucru individual.iml" />
       <module fileurl="file://$PROJECT_DIR$/AgeTur - lucru individual/AgeTur - lucru individual.iml" filepath="$PROJECT_DIR$/AgeTur - lucru individual/AgeTur - lucru individual.iml" />
       <module fileurl="file://$PROJECT_DIR$/Cinematograf - lucru individual/Cinematograf - lucru individual.iml" filepath="$PROJECT_DIR$/Cinematograf - lucru individual/Cinematograf - lucru individual.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spital/FactoryMethod/FactoryMethod.iml" filepath="$PROJECT_DIR$/Spital/FactoryMethod/FactoryMethod.iml" />
